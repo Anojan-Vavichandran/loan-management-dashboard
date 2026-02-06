@@ -11,7 +11,7 @@ export function BrokerOverview() {
 
   return (
     <div className="space-y-6">
-      {/* 1. Broker Profile Section */}
+      {/* Broker Profile Section */}
       <Card className="p-5 border-none shadow-sm bg-white">
         <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-4">Broker Overview</h3>
         

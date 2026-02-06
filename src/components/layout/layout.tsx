@@ -4,7 +4,7 @@ import { Search, Bell, HelpCircle, LayoutDashboard } from "lucide-react";
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex flex-col font-sans">
-      {/* Global Header */}
+      {/* Header */}
       <header className="h-16 border-b bg-white/80 backdrop-blur-md flex items-center justify-between px-8 sticky top-0 z-50">
         <div className="flex items-center gap-2">
           <div className="bg-blue-600 p-1.5 rounded-lg text-white">
@@ -33,7 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </header>
 
-      {/* Main Content Area */}
+      {/* Main Content  */}
       <div className="max-w-[1600px] mx-auto w-full p-6">
         {children}
       </div>
