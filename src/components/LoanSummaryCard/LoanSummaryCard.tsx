@@ -1,5 +1,4 @@
-import { Card } from "@/components/ui/card";
-import { DollarSign } from "lucide-react";
+
 
 interface LoanSummaryProps {
   activeBorrowerDetail: any;

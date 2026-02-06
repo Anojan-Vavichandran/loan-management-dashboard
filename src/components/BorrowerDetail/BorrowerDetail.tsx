@@ -4,9 +4,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AlertCircle, ShieldAlert, Mail, Phone } from "lucide-react";
 import { useBorrowerStore } from "@/store/useBorrowerStore";
 import { LoanSummaryCard } from "../LoanSummaryCard/LoanSummaryCard";
+import { useAuthStore } from "@/store/useAuthStore";
 
 export function BorrowerDetail() {
   const { activeBorrowerDetail } = useBorrowerStore();
+  const { userRole } = useAuthStore();
 
   if (!activeBorrowerDetail) return (
     <div className="flex items-center justify-center h-64 text-slate-400 italic">
@@ -65,7 +67,7 @@ export function BorrowerDetail() {
               <Button size="sm" variant="outline" onClick={() => handleAction("Send to Valuer")}>
                 Send to Valuer
               </Button>
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 ml-auto px-6" onClick={() => handleAction("Approve Loan")}>
+              <Button size="sm" className={`${userRole === 'Admin' ? 'bg-blue-600 hover:bg-blue-700' : 'bg-slate-500'} ml-auto px-6`} onClick={() => handleAction("Approve Loan")} disabled={userRole !== 'Admin'} >
                 Approve Loan
               </Button>
             </div>
