@@ -29,10 +29,10 @@ export function BorrowerDetail() {
       {/* Detail Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: "Loan Amount", value: `$${activeBorrowerDetail.loan_amount.toLocaleString()}`, icon: <DollarSign size={14}/> },
+          { label: "Loan Amount", value: `${activeBorrowerDetail.loan_amount.toLocaleString()}`, icon: <DollarSign size={14}/> },
           { label: "Employment", value: activeBorrowerDetail.employment },
           { label: "Credit Score", value: activeBorrowerDetail.credit_score },
-          { label: "Income", value: `$${activeBorrowerDetail.income.toLocaleString()}` }
+          { label: "Income", value: `${activeBorrowerDetail.income.toLocaleString()}` }
         ].map((item, i) => (
           <div key={i} className="p-3 bg-slate-50 rounded-lg border border-slate-100">
             <p className="text-[10px] text-slate-400 uppercase font-bold">{item.label}</p>
