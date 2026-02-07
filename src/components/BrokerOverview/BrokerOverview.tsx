@@ -18,7 +18,7 @@ export function BrokerOverview() {
   const BrokerContent = () => (
     <div className="space-y-6">
       {/* Broker Profile Card */}
-      <Card className="p-5 border-none shadow-sm bg-white lg:shadow-none lg:border lg:bg-transparent">
+      <Card className=" border-none shadow-sm bg-white lg:shadow-none lg:border lg:bg-transparent">
         <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-4">Broker Overview</h3>
         
         <div className="flex items-center gap-4 mb-6">

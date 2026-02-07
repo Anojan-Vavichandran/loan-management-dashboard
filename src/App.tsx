@@ -47,7 +47,7 @@ function App() {
       <main className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-full items-start">
         
         {/* borrower pipeline */}
-        <aside className="lg:col-span-3 h-fit">
+        <aside className="lg:col-span-3 h-fit bg-white p-6 shadow-sm rounded-2xl ">
           <BorrowerPipeline />  
         </aside>
 
@@ -57,7 +57,7 @@ function App() {
         </section>
 
         {/* broker overview */}
-        <aside className="lg:col-span-3 space-y-6">
+        <aside className="lg:col-span-3 space-y-6 bg-white p-6 shadow-sm rounded-2xl">
           <BrokerOverview />
       
         </aside>

@@ -24,22 +24,36 @@ export function BorrowerDetail() {
   return (
     <div className="space-y-6 animate-in fade-in duration-500">
       {/* Header Info */}
-      <div className="flex justify-between items-center pb-4 border-b">
-        <div>
-          <h2 className="text-2xl font-extrabold text-slate-900">{activeBorrowerDetail.name}</h2>
-          <div className="flex gap-4 mt-2 text-slate-500 text-sm">
-            <span className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
-              <Mail size={14}/> {activeBorrowerDetail.email}
-            </span>
-            <span className="flex items-center gap-1 cursor-pointer hover:text-blue-500 transition-colors">
-              <Phone size={14}/> {activeBorrowerDetail.phone}
-            </span>
-          </div>
-        </div>
-        <Badge className="bg-amber-100 text-amber-700 border-amber-200 hover:bg-amber-100 font-bold px-3 py-1">
-          {activeBorrowerDetail.status}
-        </Badge>
-      </div>
+ <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-4 border-b">
+  <div className="space-y-2 w-full sm:w-auto">
+    <div className="flex items-center justify-between sm:justify-start gap-3">
+      <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">
+        {activeBorrowerDetail.name}
+      </h2>
+
+      <Badge className="sm:hidden bg-amber-100 text-amber-700 border-amber-200 font-bold px-2 py-0.5 text-[10px]">
+        {activeBorrowerDetail.status}
+      </Badge>
+    </div>
+
+
+    <div className="flex flex-wrap gap-x-4 gap-y-2 text-slate-500 text-sm">
+      <span className="flex items-center gap-1.5 cursor-pointer hover:text-blue-500 transition-colors whitespace-nowrap">
+        <Mail size={14} className="text-slate-400"/> 
+        {activeBorrowerDetail.email}
+      </span>
+      <span className="flex items-center gap-1.5 cursor-pointer hover:text-blue-500 transition-colors whitespace-nowrap">
+        <Phone size={14} className="text-slate-400"/> 
+        {activeBorrowerDetail.phone}
+      </span>
+    </div>
+  </div>
+
+
+  <Badge className="hidden sm:flex bg-amber-100 text-amber-700 border-amber-200 hover:bg-amber-100 font-bold px-3 py-1 shrink-0">
+    {activeBorrowerDetail.status}
+  </Badge>
+</div>
 
    
       <LoanSummaryCard activeBorrowerDetail={activeBorrowerDetail} />
