@@ -103,7 +103,7 @@ export function BorrowerDetail() {
         <Button 
           size="sm" 
           variant="destructive" 
-          className="w-full md:w-auto font-bold shadow-sm"
+          className="w-full md:w-auto font-bold shadow-sm bg-red-500 hover:bg-red-600"
           onClick={() => handleAction("Escalate to Credit Committee")}
         >
           Escalate to Credit Committee
